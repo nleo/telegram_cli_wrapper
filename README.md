@@ -7,6 +7,13 @@ Download, install `telegram-cli` and run it in daemon mode `telegram-cli -k tg-s
 ```ruby
 telegram = TelegramCliWrapper.new port: 2392, host: 'localhost'
 telegram.contacts
+telegram.dialogs
+telegram.unread_messages
+# message - object returned by daemon
+telegram.respond message, text
+# user - print_name returned by daemon
+telegram.send_message user, text
+# exec - direct command to daemon
 telegram.exec 'msg Some_User some message'
 ```
 
