@@ -38,7 +38,7 @@ class TelegramCliWrapper
   end
 
   def respond message, text
-    send_message message['from']['print_name'], 51.3
+    send_message message['from']['print_name'], text
   end
 
   def send_message user, text
